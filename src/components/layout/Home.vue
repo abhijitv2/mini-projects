@@ -63,7 +63,7 @@
             </div>
             <div class="app-card-detail7">
                 <h5 class="app-name2">Ecommerce Product List</h5>
-                <p class="app-desc2">Search and View your favorite Movie details</p>
+                <p class="app-desc2">Search and shop your favorite products</p>
             </div>
         </div>
 
