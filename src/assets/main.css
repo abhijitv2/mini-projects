@@ -72,52 +72,51 @@ th {
   font-weight: 700;
 }
 
+
+
 .mini-projects{
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
-  background-color: rgb(18 34 48);
+  /* background-color: rgb(18 34 48); */
+  /* background-color: rgb(183 183 183); */
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
   justify-content: center;
   padding:50px 0px;
 }
 
 .app-card{
   display: flex;
-  height:200px;
-  width:250px;
+  flex-direction: column;
+  /* height:250px;
+  width:300px; */
+  height:215px;
+  width: 240px;
   justify-content: center;
   align-items: center;
   color:#000;
   background: #fff;
   border-radius: 8px;
   margin:30px 35px;
-  font-weight: 700;
-  font-size:25px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 
-.app-card:hover{
-  font-size:28px;
-}
 
-.app-card:nth-child(1){
-  color:rgb(58, 163, 63);
-}
-.app-card:nth-child(2){
-  color:rgb(235, 182, 70);
-}
 .app-card:nth-child(3){
-  color:rgb(75, 165, 238);
+  color:rgb(255, 255, 255);
 }
 .app-card:nth-child(4){
-  color:rgb(196, 18, 18);
+  color:rgb(255, 255, 255);
 }
+
 .app-card:nth-child(5){
-  color:rgb(122, 122, 122);
+  color:rgb(255, 255, 255);
 }
 .app-card:nth-child(6){
-  color:rgb(151, 59, 139);
+  color:rgb(241 129 226);
 }
 .app-card:nth-child(7){
   color:rgb(8, 10, 109);
@@ -125,9 +124,161 @@ th {
 
 
 .app-card:hover {
-  background-color: #000 !important;
+ 
+  box-shadow: 1px 1px 15px 5px #5c5c5c;
+}
+.app-card-image1{
+  
+  width:100px;
+  height: 100px;
+  padding:10px;
+  margin:10px;
 }
 
+
+  .app-card-image2 {
+    width: 200px;
+    height: 120px;
+    background: url('/src/assets/images/task.png');
+    
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+
+
+.app-card-image3 {
+  width: 200px;
+  height: 120px;
+  background: url('/src/assets/images/weather.png');
+  
+  background-size: 45%;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+
+.app-card-image4 {
+  width: 200px;
+  height: 120px;
+  background: url('/src/assets/images/trivia.jpg');
+  background-size: 77%;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+.app-card-image5{
+  width: 200px;
+  height: 120px;
+  background: url('/src/assets/images/github.png');
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.app-card-image6{
+  width: 200px;
+  height: 120px;
+  background: url('/src/assets/images/movie.png');
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.app-card-image7{
+  width: 200px;
+  height: 120px;
+  background: url('/src/assets/images/ecom.jpg');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.app-card-image img{
+  width:100%;
+  height:100px;
+}
+
+.app-name1{
+  font-weight: bolder;
+  color:#fff;
+}
+
+.app-name2{
+  font-weight: bolder;
+}
+
+.app-card-detail1{
+  background: #146d2a;
+  padding:15px;
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+}
+
+.app-card-detail2{
+  background: #f7d068;
+  padding:15px;
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+}
+
+.app-card-detail3{
+  background: #3e8ed0;
+  padding:15px;
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+}
+
+
+.app-card-detail4{
+  background: rgb(196, 18, 18);
+  padding:15px;
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+}
+
+.app-card-detail5{
+  background: rgb(0, 0, 0);
+  padding:15px;
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+}
+
+
+.app-card-detail6{
+  background: rgb(87, 11, 90);
+  padding:15px;
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+}
+
+.app-card-detail7{
+  background: rgb(151, 184, 211);
+  padding:15px;
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+}
+
+
+
+
+.app-desc1{
+  font-size:14px;
+  color:#cac8c8
+}
+
+.app-desc2{
+  font-size:14px;
+}
+
+.app-desc3{
+  font-size:14px;
+}
 
 
 .weather-app-container{
@@ -406,9 +557,9 @@ a,
 
 
 @media (hover: hover) {
-  a:hover {
+  /* a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
-  }
+  } */
 }
 /* 
 @media (min-width: 1024px) {
