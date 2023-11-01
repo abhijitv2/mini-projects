@@ -2,7 +2,7 @@
 <div class="card">
    <header class="card-header">
     <p class="card-header-title">
-      {{ props.movie.Title }}
+      {{ props?.movie?.Title }}
     </p>
   </header>
    

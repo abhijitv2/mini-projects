@@ -2,7 +2,7 @@
 <template>
     <NavBar name="Movie Search App" bgColor="danger" txtColor="white" />
     <div class="movies-search">
-        <input class="input is-medium" type="text" placeholder="Search Movie..." v-model="searchTerm" @input="fetchMovie()" >
+        <input class="input is-medium" type="text" placeholder="Search Movie..." v-model="searchTerm"  >
     </div>
     
 
@@ -10,7 +10,7 @@
 
         <div v-if="result === 0" class="animate-text">Please type movie name to search..</div>
 
-        <div v-else class="card-grid-item">
+        <div v-else-if="result" class="card-grid-item">
             <MovieCard :movie="result" />
         </div>
     </div>
@@ -24,7 +24,7 @@ https://api.themoviedb.org/3/search/movie?api_key=a7821f3454f97a37cae012a6ab25c1
 */
 import NavBar from "@/components/layout/NavBar.vue";
 import MovieCard from "../../components/movies/MovieCard.vue";
-import { computed, ref, watchEffect } from "vue";
+import { computed, ref, watchEffect, onMounted, watch } from "vue";
 import axios from "axios";
 
 const searchTerm = ref("");
@@ -51,12 +51,18 @@ const fetchMovie = async () => {
 }
 
 
-watchEffect(()=>{
+
+
+onMounted(()=>{
     fetchMovie();
 })
 
-
-
+watch(searchTerm,(newVal,oldVal)=>{
+    if(newVal !== oldVal && newVal.length>1)
+    {
+        fetchMovie();
+    }
+})
 
 
 </script>
